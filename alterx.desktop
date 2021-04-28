@@ -1,0 +1,7 @@
+[Desktop Entry]
+Terminal=false
+Hidden=false
+Name=AlterX
+Type=Application
+X-GNOME-Autostart=true
+Exec=/home/USER/linuxcnc/configs/alterx/run-linuxcnc.sh

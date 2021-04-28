@@ -1,0 +1,11 @@
+allow-hotplug NETWORK
+iface NETWORK inet dhcp
+
+allow-hotplug SBET
+iface SBET inet static
+address 192.168.10.100
+netmask 255.255.255.0
+
+auto lo
+iface lo inet loopback
+
