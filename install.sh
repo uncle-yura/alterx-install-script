@@ -75,12 +75,13 @@ apt upgrade && echo Complete 2 || critical_fail 2 update
 install:
 echo "********* Install packets *********"
 apt -y install gvfs-backends gvfs-bin python-serial python-pip net-tools ethtool gedit git vsftpd && echo Complete 1 || critical_fail 1 install
-yes | pip install pyudev crcmod pyusb pyqtgraph vtk serial && echo Complete 2 || critical_fail 2 install
+yes | pip install pyudev crcmod pyusb pyqtgraph vtk pyserial polib && echo Complete 2 || critical_fail 2 install
 
 clone:
 echo "********* Clone interface *********"
-git clone https://github.com/uncle-yura/alterx.git /home/$USER && echo Complete 1 || critical_fail 1 clone
-git clone https://github.com/uncle-yura/awlsim.git /home/$USER && echo Complete 2 || critical_fail 2 clone
+git clone https://github.com/uncle-yura/alterx.git /home/$USER/alterx && echo Complete 1 || critical_fail 1 clone
+python /home/$USER/alterx/setup.py && echo Complete 2 || critical_fail 2 clone
+git clone https://github.com/uncle-yura/awlsim.git /home/$USER/awlsim && echo Complete 3 || critical_fail 3 clone
 
 keyboard:
 echo "********* Install alterx keyboard *********"
