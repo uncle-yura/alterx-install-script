@@ -82,6 +82,7 @@ echo "********* Clone interface *********"
 git clone https://github.com/uncle-yura/alterx.git /home/$USER/alterx && echo Complete 1 || critical_fail 1 clone
 python /home/$USER/alterx/setup.py && echo Complete 2 || critical_fail 2 clone
 git clone https://github.com/uncle-yura/awlsim.git /home/$USER/awlsim && echo Complete 3 || critical_fail 3 clone
+python /home/$USER/awlsim/setup.py install && echo Complete 4 || critical_fail 4 clone
 
 keyboard:
 echo "********* Install alterx keyboard *********"
